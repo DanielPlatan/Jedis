@@ -1,0 +1,7 @@
+<form action="candidate.html" method="post" >
+    <h1>{{ header }}</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <input type="submit" value={{ button }}  />
+</form>

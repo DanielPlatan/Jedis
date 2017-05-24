@@ -1,0 +1,12 @@
+<form action="test" method="post" >
+{% csrf_token %}
+    <h1>{{ header }}</h1>
+    {% for q in list %}
+<p><b>{{ q.text }}</b><Br>
+   <input type="radio" name=choice{{ q.id }} value="Да"> Да<Br>
+   <input type="radio" name=choice{{ q.id }} value="Нет"> Нет<Br>
+  </p>
+{% endfor %}
+    <input type="submit" value={{ button }}  />
+
+</form>

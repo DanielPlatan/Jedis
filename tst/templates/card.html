@@ -1,0 +1,10 @@
+<form action="card.html?pdid={{candidate.id}}" method="post" >
+    <h1>Карта кандидата: {{ candidate }}</h1>
+    {% csrf_token %}
+    {% for res in results %}
+         <ul>{{  res.question }}</ul>
+         <ul>{{  res.result }}</ul>
+     {% endfor %}
+    <input type="submit" value="Зачислить в падаваны"  name="approve" />
+    <input type="submit" value="Вернуться"  />
+</form>

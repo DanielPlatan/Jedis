@@ -1,0 +1,23 @@
+<form action="index.html" method="post" >
+    <h1>{{ header }}</h1>
+    {% csrf_token %}
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr>
+    <td width="200" valign="top">
+         <h2>  Кандидаты </h2>
+     {% for obj in candidate_list %}
+         <ul><a href="card.html?id={{ obj.id }}" target=_blank>{{ obj }}</a></ul>
+     {% endfor %}
+    </td>
+       <td valign="top">
+            <h2> Мои падаваны </h2>
+     {% for obj in padavan_list %}
+         <ul>{{ obj }}</ul>
+     {% endfor %}
+       </td>
+   </tr>
+  </table>
+
+
+    <input type="submit" value={{ button }}  />
+</form>
